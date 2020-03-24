@@ -7,3 +7,12 @@ before_install:
     
 script:
     - docker run -e CI=true swar23/docker-react npm run test
+
+deploy:
+    provider: azure_web_apps
+    username: $azure_deployment_user
+    password: $azure_deployment_password   # If AZURE_WA_PASSWORD isn't set
+    site: "docker-react"
+    verbose: true
+    on:
+        branch: master
