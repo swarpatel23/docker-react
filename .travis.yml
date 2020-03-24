@@ -1,6 +1,3 @@
-language: node_js
-node_js:
-    - 7
 sudo: required
 services:
     - docker
@@ -12,10 +9,13 @@ script:
     - docker run -e CI=true swar23/docker-react npm run test
 
 deploy:
-    provider: azure_web_apps
-    username: $azure_deployment_user
-    password: $azure_deployment_password   # If AZURE_WA_PASSWORD isn't set
-    site: "docker-react"
-    verbose: true
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "docker-react"
+    env: "DockerReact-env"
+    bucket_name: "elasticbeanstalk-us-east-2-436866099277"
+    bucket_path: "docker-react"
     on:
         branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
