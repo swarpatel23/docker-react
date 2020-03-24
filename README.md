@@ -10,4 +10,4 @@ Docker-compose file make things easier which we can do via docker-cli. Due to Do
 
 Travis-ci is used for continuous integration, Continuous Testing and Continuous Deployement on successfull testing.
 
-DEBUG CODE, NOT A ENVIORNMENT.
+DEBUG CODE, NOT AN ENVIORNMENT.
