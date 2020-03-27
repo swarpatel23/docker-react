@@ -11,7 +11,8 @@ function App() {
           Hello swar, Bye There, YEAH!!!!!!!
           <br>
           </br>
-          I was changed on feature branch
+          I was changed on feature branch,
+          new changes
         </p>
         <a
           className="App-link"
